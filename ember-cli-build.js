@@ -1,24 +1,24 @@
 'use strict';
-
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'ember-bootstrap': {
+      'bootstrapVersion': 4,
+      'importBootstrapFont': false,
+      'importBootstrapCSS': false
+    }
   });
+  // Stylesheet part 1
+  app.import('vendor/style-start.css');
+ 
+  // Bootstrap
+  app.import('node_modules/bootstrap/dist/css/bootstrap.css');
 
-  // Use `app.import` to add additional libraries to the generated
-  // output files.
-  //
-  // If you need to use different assets in different
-  // environments, specify an object as the first parameter. That
-  // object's keys should be the environment name and the values
-  // should be the asset to use in that environment.
-  //
-  // If the library that you are including contains AMD or ES6
-  // modules that you would like to import into your application
-  // please specify an object with the list of modules as keys
-  // along with the exports of each module as its value.
+  // Stylesheet part 2
+  app.import('vendor/style-end.css');
 
+  // Simple line icons
+  app.import('node_modules/simple-line-icons/css/simple-line-icons.css');
+  
   return app.toTree();
 };

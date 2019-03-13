@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,400,700|Roboto:400,500,700");
+
+.btn-primary {
+    background-color: #24d5d8;
+    border-color: #24d5d8;
+}
+
+.btn-secondary {
+    background-color: #aab2bd;
+    border-color: #aab2bd;
+}
+
+.btn-info {
+   background-color: #6569df;
+    border-color: #6569df;
+}
+
+.form-control {
+    height: unset;
+}
