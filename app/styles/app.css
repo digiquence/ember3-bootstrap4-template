@@ -18,3 +18,14 @@
 .form-control {
     height: unset;
 }
+
+.form-check .form-check-label .input-helper::after {
+    content: '\2713';
+}
+
+.form-radio.form-radio-flat label input:checked + .input-helper::after {
+    content: '\2022';
+    top: -15px;
+    left: -1px;
+    font-size: 2.5em;    
+}

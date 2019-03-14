@@ -1,5 +1,7 @@
 import Route from '@ember/routing/route';
+import { scheduleOnce } from '@ember/runloop';
 import RSVP from 'rsvp';
+import $ from 'jquery';
 
 export default Route.extend({
     model() {
@@ -16,4 +18,12 @@ export default Route.extend({
             versionNumber: "1.0.0"
         });
     },
+    actions: {
+        didTransition() {
+            console.log("didTansition");
+            scheduleOnce('afterRender', this, () => {
+                $(".form-check label,.form-radio label").append('<i class="input-helper"></i>');
+            });
+        },
+    }
 });
