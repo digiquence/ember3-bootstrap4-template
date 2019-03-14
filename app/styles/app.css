@@ -29,3 +29,24 @@
     left: -1px;
     font-size: 2.5em;    
 }
+
+
+.list-ticked li::before {
+    content: '\2713';
+    color: #fd3258;
+}
+
+.list-arrow li::before {
+    content: '>';
+    color: #33c92e;
+}
+
+.list-star li::before {
+    content: '\2605';
+    color: #fed961;
+}
+
+
+.list-ticked li::before, .list-arrow li::before, .list-star li::before {
+    font-family: unset;
+}
